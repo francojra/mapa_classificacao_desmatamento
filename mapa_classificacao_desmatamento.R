@@ -66,3 +66,26 @@ classes <- rep(c("Floresta", "Corte_Raso", "Outros"),
 
 # Combinar em dataframe
 training <- data.frame(class = as.factor(classes), train_values)
+
+## 3 - Treinar o modelo de classificação
+
+# Modelo Random Forest (pode usar outros como SVM)
+library(randomForest)
+model_rf <- randomForest(class ~ ., data = training)
+
+# Classificar a imagem
+classification <- predict(img_cropped, model_rf)
+plot(classification, main = "Classificação Supervisionada")
+
+# Visualização final -----------------------------------------------------------------------------------------------------------------------
+
+# Mapa temático
+ggplot() +
+  geom_raster(data = as.data.frame(classification_fct, xy = TRUE), 
+              aes(x = x, y = y, fill = as.factor(layer))) +
+  scale_fill_manual(values = c("darkgreen", "brown", "gray"),
+                    labels = c("Floresta", "Corte Raso", "Outros"),
+                    name = "Classes") +
+  ggtitle("Mapa de Classificação de Áreas Desmatadas") +
+  coord_equal() +
+  theme_minimal()
