@@ -46,8 +46,23 @@ plot(ndvi, main = "NDVI")
 
 # Classificação supervisionada -------------------------------------------------------------------------------------------------------------
 
+## 1 - Criar áreas de treinamento (se não tiver shapefiles)
+
 # Criar polígonos de treinamento (execute no console interativamente)
 train_data <- readOGR("caminho/para/seus/dados_de_treinamento.shp")
 
 # Se não tiver dados de treinamento, você pode criar manualmente:
 # train_data <- drawPoly(img_cropped, n = 3, type = 'p', col = 'red') # Para cada classe
+
+## 2 - Extrair valores espectrais para treinamento
+
+# Extrair valores das bandas para as áreas de treinamento
+train_values <- extract(img_cropped, train_data)
+train_values <- do.call(rbind, train_values)
+
+# Criar vetor de classes (ajuste conforme suas classes)
+classes <- rep(c("Floresta", "Corte_Raso", "Outros"), 
+               sapply(train_data@polygons, function(x) nrow(x@coords)))
+
+# Combinar em dataframe
+training <- data.frame(class = as.factor(classes), train_values)
