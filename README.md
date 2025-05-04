@@ -1,2 +1,6 @@
-# mapa_classificacao_desmatamento
-Script com o passo a passo para elaboração de um mapa de classificação no R.
+# Mapa de classificacao no R - Dados de desmatamento
+
+### Elaborando um Mapa de Classificação de Áreas Desmatadas com Corte Raso no R --------------------------------------------------------------
+### Autoria do script: Jeanne Franco ---------------------------------------------------------------------------------------------------------
+### Data: 02/05/2025 -------------------------------------------------------------------------------------------------------------------------
+
