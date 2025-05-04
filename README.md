@@ -1,6 +1,7 @@
 # Mapa de classificacao no R - Dados de desmatamento
 
-### Elaborando um Mapa de Classificação de Áreas Desmatadas com Corte Raso no R --------------------------------------------------------------
-### Autoria do script: Jeanne Franco ---------------------------------------------------------------------------------------------------------
-### Data: 02/05/2025 -------------------------------------------------------------------------------------------------------------------------
+### Elaborando um Mapa de Classificação de Áreas Desmatadas com Corte Raso no R 
+### Autoria do script: Jeanne Franco 
+### Data: 02/05/2025 
 
+#### Tópicos do script
