@@ -11,6 +11,10 @@ install.packages(c("raster", "rgeos", "ggplot2",
 
 install.packages("rgdal", type = "source")
 
+install.packages("devtools")
+library(devtools)
+install_url('https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages')
+
 # Carregar pacotes
 library(raster)
 library(rgdal)
