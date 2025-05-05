@@ -29,7 +29,7 @@ library(viridis)
 img <- stack("imagem.tif")
 
 # Carregar shapefile de áreas desmatadas (se disponível)
-desmatamento <- readOGR("shapefile.shp")
+desmatamento <- readOGR("yearly_deforestation.shp")
 
 # Visualizar os dados
 plotRGB(img, r = 4, g = 3, b = 2, stretch = "lin") # Para Landsat (bandas 4,3,2)
