@@ -4,6 +4,8 @@
 ### Autoria do script: Jeanne Franco 
 ### Data: 02/05/2025 
 
+Um mapa de classificação, ou mapa temático, é um mapa que visa representar informações e fenômenos específicos em um determinado espaço geográfico, utilizando cores, símbolos e outros recursos visuais para facilitar a compreensão e análise.
+
 #### Tópicos do script
 
 1. Instalar e carregar os pacotes necessários;
