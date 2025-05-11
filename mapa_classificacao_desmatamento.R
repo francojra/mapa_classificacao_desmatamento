@@ -57,6 +57,10 @@ plot(ndvi, main = "NDVI")
 ### É uma medida da saúde das plantas com base em como uma planta.
 ### reflete a luz (geralmente luz solar) em frequências específicas.
 ### Quanto mais próximo o NDVI estiver de 1, mais saudável é a planta.
+
+### O resultado do mapa mostra um índice na legenda que varia de -1 a
+### 1, quanto mais próximo de 1, mais nítida ou densa é a vegetação.
+
 # Classificação supervisionada -------------------------------------------------------------------------------------------------------------
 
 ## 1 - Criar áreas de treinamento (se não tiver shapefiles)
