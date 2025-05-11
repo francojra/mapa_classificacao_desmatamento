@@ -50,7 +50,7 @@ img_cropped <- crop(img, extent_aoi)
 ### fornecidas no console após correr o nome "img" no R
 
 # Calcular índices de vegetação (NDVI é comum para detecção de desmatamento)
-ndvi <- (img_cropped[[4]] - img_cropped[[3]]) / (img_cropped[[4]] + img_cropped[[3]])
+ndvi <- (img_cropped[[3]] - img_cropped[[2]]) / (img_cropped[[3]] + img_cropped[[2]])
 plot(ndvi, main = "NDVI")
 
 # Classificação supervisionada -------------------------------------------------------------------------------------------------------------
@@ -58,7 +58,7 @@ plot(ndvi, main = "NDVI")
 ## 1 - Criar áreas de treinamento (se não tiver shapefiles)
 
 # Criar polígonos de treinamento (execute no console interativamente)
-train_data <- readOGR("caminho/para/seus/dados_de_treinamento.shp")
+train_data <- readOGR("dados_de_treinamento.shp")
 
 # Se não tiver dados de treinamento, você pode criar manualmente:
 # train_data <- drawPoly(img_cropped, n = 3, type = 'p', col = 'red') # Para cada classe
