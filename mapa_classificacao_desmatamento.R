@@ -44,7 +44,7 @@ plotRGB(img, r = 4, g = 3, b = 2, stretch = "lin") # Para Landsat (bandas 4,3,2)
 
 # Recortar para área de interesse (opcional)
 extent_aoi <- extent(c(xmin, xmax, ymin, ymax)) # Defina suas coordenadas
-img_cropped <- crop(img, extent_aoi)
+img_cropped <- crop(img, extent_aoi) # Cortar a imagem "img" de acordo com as coordenadas definidas na função acima
 
 # Calcular índices de vegetação (NDVI é comum para detecção de desmatamento)
 ndvi <- (img_cropped[[4]] - img_cropped[[3]]) / (img_cropped[[4]] + img_cropped[[3]])
