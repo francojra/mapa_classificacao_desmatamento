@@ -53,6 +53,10 @@ img_cropped <- crop(img, extent_aoi)
 ndvi <- (img_cropped[[3]] - img_cropped[[2]]) / (img_cropped[[3]] + img_cropped[[2]])
 plot(ndvi, main = "NDVI")
 
+### O NDVI é um Índice de Vegetação por Diferença Normalizada
+### É uma medida da saúde das plantas com base em como uma planta.
+### reflete a luz (geralmente luz solar) em frequências específicas.
+### Quanto mais próximo o NDVI estiver de 1, mais saudável é a planta.
 # Classificação supervisionada -------------------------------------------------------------------------------------------------------------
 
 ## 1 - Criar áreas de treinamento (se não tiver shapefiles)
