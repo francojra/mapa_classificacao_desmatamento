@@ -9,15 +9,11 @@
 install.packages(c("raster", "rgeos", "ggplot2", 
                    "RStoolbox", "sf", "sp", "viridis"))
 
-install.packages("rgdal", type = "source")
-
-install.packages("devtools")
-library(devtools)
-install_url('https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages')
+# install.packages("rgdal")
 
 # Carregar pacotes
 library(raster)
-library(rgdal)
+# library(rgdal)
 library(ggplot2)
 library(RStoolbox)
 library(sf)
@@ -32,10 +28,10 @@ library(viridis)
 ## 2 - Dados de referência (shapefiles ou outros dados vetoriais)
 
 # Carregar imagem de satélite (substitua pelo seu caminho)
-img <- stack("imagem.tif")
+img <- stack("CAAT2021_21665_L8_041021_C_RED.tif")
 
 # Carregar shapefile de áreas desmatadas (se disponível)
-desmatamento <- readOGR("yearly_deforestation.shp")
+desmatamento <- read_sf("EDITION_21665_21.shp")
 
 # Visualizar os dados
 plotRGB(img, r = 4, g = 3, b = 2, stretch = "lin") # Para Landsat (bandas 4,3,2)
@@ -44,7 +40,7 @@ plotRGB(img, r = 4, g = 3, b = 2, stretch = "lin") # Para Landsat (bandas 4,3,2)
 
 # Recortar para área de interesse (opcional)
 extent_aoi <- extent(c(xmin, xmax, ymin, ymax)) # Defina suas coordenadas
-img_cropped <- crop(img, extent_aoi) # Cortar a imagem "img" de acordo com as coordenadas definidas na função acima
+img_cropped <- crop(img, extent_aoi)
 
 # Calcular índices de vegetação (NDVI é comum para detecção de desmatamento)
 ndvi <- (img_cropped[[4]] - img_cropped[[3]]) / (img_cropped[[4]] + img_cropped[[3]])
