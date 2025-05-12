@@ -46,6 +46,10 @@ raster::plotRGB(img, r = 1, g = 3, b = 2, stretch = "lin") # Para Landsat (banda
 extent_aoi <- extent(c(461685, 690015, -915915, -683385)) # Defina suas coordenadas
 img_cropped <- crop(img, extent_aoi)
 
+## Ou:
+
+img_cropped <- crop(img, desmatamento) # Associa a imagem satelite com a geometria do shapefile
+
 ### OBS.: os valores de extent estão disponíveis nas informações
 ### fornecidas no console após correr o nome "img" no R
 
