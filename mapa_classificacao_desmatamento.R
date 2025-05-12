@@ -67,6 +67,9 @@ plot(ndvi, main = "NDVI")
 ### O resultado do mapa mostra um índice na legenda que varia de -1 a
 ### 1, quanto mais próximo de 1, mais nítida ou densa é a vegetação.
 
+### Índices mais próximos do verde escuro ou 1, representam vegetação
+### com mais vigor.
+
 # Classificação supervisionada -------------------------------------------------------------------------------------------------------------
 
 ## 1 - Criar áreas de treinamento (se não tiver shapefiles)
