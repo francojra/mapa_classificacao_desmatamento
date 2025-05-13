@@ -6,9 +6,11 @@
 
 Um mapa de classificação, ou mapa temático, é um mapa que visa representar informações e fenômenos específicos em um determinado espaço geográfico, utilizando cores, símbolos e outros recursos visuais para facilitar a compreensão e análise. Essa classificação é feita para facilitar a compreensão e análise de fenômenos geográficos, permitindo identificar padrões e tendências com maior clareza. Em essência, é uma forma de organizar e apresentar informações geográficas de forma organizada e visualmente apelativa.
 
-Os satélites circulam em volta da Terra em diferentes intervalos de tempo, por exemplo, um satélite pode retornar ao mesmo ponto após 16 dias. Esses satélites capturam as imagens através da luz solar que é refletida no solo. Os principais satélites são: Landsat, Sentinel-2 e CBERS. O Landsar é um satélite mais antigo, o Sentinel apresenta imagens em alta resolução.
+Os satélites circulam em volta da Terra em diferentes intervalos de tempo, por exemplo, um satélite pode retornar ao mesmo ponto após 16 dias. Esses satélites capturam as imagens através da luz solar que é refletida no solo. Os principais satélites são: Landsat, Sentinel-2 e CBERS. O Landsat é um satélite mais antigo, o Sentinel apresenta imagens em alta resolução.
 
 A exploração dos dados de satélite serve para entender o arranjo de elementos nas imagens. Por exemplo, um ecólogo poderá entender o desmatamento e a mudança da paisagem ao longo do tempo. Também, é possível elaborar diversas classificações do uso do solo como água, vegetação, área urbana, agricultura, etc.
+
+O INPE é responsável por dois principais sistemas de monitoramento das florestas tropicais, entre eles estão o PRODES e o DETER. Esses sistemas foram criados para apoiar políticas públicas da área ambiental. O PRODES foi criado em 1978 e é mais antigo. Com 229 cenas das imagens satélites é possível cobrir todo bioma.
 
 #### Tópicos do script
 
