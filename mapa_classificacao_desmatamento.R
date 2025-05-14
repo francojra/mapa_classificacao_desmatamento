@@ -6,7 +6,7 @@
 # Instalar e carregar os pacotes necessários -----------------------------------------------------------------------------------------------
 
 # Instalar pacotes (se necessário)
-install.packages(c("raster", "rgeos", "ggplot2", 
+install.packages(c("raster", "terra","ggplot2", "frair",
                    "RStoolbox", "sf", "sp", "viridis"))
 
 # install.packages("rgdal")
@@ -16,6 +16,7 @@ library(raster)
 library(terra)
 # library(rgdal)
 library(ggplot2)
+library(frair)
 library(RStoolbox)
 library(sf)
 library(sp)
