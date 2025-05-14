@@ -20,6 +20,7 @@ library(RStoolbox)
 library(sf)
 library(sp)
 library(viridis)
+library(tidyverse)
 
 # Carregar os dados ------------------------------------------------------------------------------------------------------------------------
 
@@ -40,6 +41,23 @@ desmatamento <- read_sf("EDITION_21665_21.shp")
 # Visualizar os dados
 raster::plotRGB(img, r = 1, g = 3, b = 2, stretch = "lin") # Para Landsat (bandas 4,3,2)
 
+library(geobr)
+
+biomas <- geobr::read_biomes()
+view(biomas)
+
+class(biomas)
+glimpse(biomas)
+
+caatinga <- biomas |>
+  filter(name_biome %in% c("Caatinga"))
+
+## Mapa bioma Caatinga
+
+ggplot() +
+  geom_sf(data = caatinga, fill = "transparent") +
+  theme_minimal()
+
 # Pré-processamento da imagem --------------------------------------------------------------------------------------------------------------
 
 # Recortar para área de interesse (opcional)
@@ -47,7 +65,6 @@ extent_aoi <- extent(c(461685, 690015, -915915, -683385)) # Defina suas coordena
 img_cropped <- crop(img, extent_aoi)
 
 ## Ou:
-
 img_cropped <- crop(img, desmatamento) # Associa a imagem satelite com a geometria do shapefile
 
 ### OBS.: os valores de extent estão disponíveis nas informações
