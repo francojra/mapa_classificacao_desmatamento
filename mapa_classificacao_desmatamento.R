@@ -65,10 +65,12 @@ ggplot() +
 extent_aoi <- extent(c(461685, 690015, -915915, -683385)) # Defina suas coordenadas
 img_cropped <- crop(img, extent_aoi)
 
+plot(img_cropped)
+
 ## Ou:
-extent_aoi_1 <- extent(c(-45.07807, -35.06698,
-                       -16.71256, -2.748381)) # Extensão do bioma Caatinga
-img_cropped <- crop(img, extent_aoi_1) # Associa a imagem satelite com a geometria do shapefile
+# extent_aoi_1 <- extent(c(-45.07807, -35.06698,
+#                        -16.71256, -2.748381)) # Extensão do bioma Caatinga
+# img_cropped <- crop(img, extent_aoi_1) # Associa a imagem satelite com a geometria do shapefile
 
 ### OBS.: os valores de extent estão disponíveis nas informações
 ### fornecidas no console após correr o nome "img" no R
