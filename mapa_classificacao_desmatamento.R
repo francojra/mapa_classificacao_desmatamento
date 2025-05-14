@@ -40,8 +40,6 @@ desmatamento <- read_sf("EDITION_21665_21.shp")
 # Visualizar os dados
 raster::plotRGB(img, r = 1, g = 3, b = 2, stretch = "lin") # Para Landsat (bandas 4,3,2)
 
-## As regiões em vermelho representam a vegetação.
-
 # Pré-processamento da imagem --------------------------------------------------------------------------------------------------------------
 
 # Recortar para área de interesse (opcional)
