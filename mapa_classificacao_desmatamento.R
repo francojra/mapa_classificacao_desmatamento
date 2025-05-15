@@ -97,7 +97,7 @@ plot(ndvi, main = "NDVI")
 train_data <- readOGR("dados_de_treinamento.shp")
 
 # Se não tiver dados de treinamento, você pode criar manualmente:
-# train_data <- drawPoly(img_cropped, n = 3, type = 'p', col = 'red') # Para cada classe
+train_data <- drawPoly(img_cropped) # Para cada classe
 
 ## 2 - Extrair valores espectrais para treinamento
 
