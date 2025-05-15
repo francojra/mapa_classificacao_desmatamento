@@ -94,10 +94,10 @@ plot(ndvi, main = "NDVI")
 ## 1 - Criar áreas de treinamento (se não tiver shapefiles)
 
 # Criar polígonos de treinamento (execute no console interativamente)
-train_data <- readOGR("dados_de_treinamento.shp")
+train_data <- readOGR("EDITION_21665_21.shp")
 
 # Se não tiver dados de treinamento, você pode criar manualmente:
-train_data <- drawPoly(img_cropped) # Para cada classe
+#train_data <- drawPoly(img_cropped) # Para cada classe
 
 ## 2 - Extrair valores espectrais para treinamento
 
