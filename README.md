@@ -16,11 +16,11 @@ O INPE é responsável por dois principais sistemas de monitoramento das florest
 
 #### Tópicos do script
 
-1. Instalar e carregar os pacotes necessários;
-2. Carregar os dados:
+1. Instalar e carregar os pacotes necessários
+2. Carregar os dados
 - Carregar imagem de satélite (substitua pelo seu caminho);
 - Carregar shapefile de áreas desmatadas (se disponível);
 - Visualizar os dados.
-3. Pré-processamento da imagem:
+3. Pré-processamento da imagem
 - Recortar para área de interesse (opcional);
 - Calcular índices de vegetação (NDVI é comum para detecção de desmatamento).
