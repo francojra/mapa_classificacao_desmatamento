@@ -1,8 +1,10 @@
-# Mapa de classificacao no R - Dados de desmatamento
+# Mapa no R - Dados de desmatamento e Cálculo do NDVI
 
-### Elaborando um Mapa de Classificação de Áreas Desmatadas com Corte Raso no R 
+### Elaborando um Mapa de Áreas Desmatadas no R 
 ### Autoria do script: Jeanne Franco 
 ### Data: 02/05/2025 
+
+#### Alguns conceitos de mapas com sensoriamento remoto
 
 Um mapa de classificação, ou mapa temático, é um mapa que visa representar informações e fenômenos específicos em um determinado espaço geográfico, utilizando cores, símbolos e outros recursos visuais para facilitar a compreensão e análise. Essa classificação é feita para facilitar a compreensão e análise de fenômenos geográficos, permitindo identificar padrões e tendências com maior clareza. Em essência, é uma forma de organizar e apresentar informações geográficas de forma organizada e visualmente apelativa.
 
